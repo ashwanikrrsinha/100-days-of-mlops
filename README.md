@@ -28,3 +28,18 @@ Today I set up the foundation for my MLOps journey.
 
 ## Next Steps
 - Dive into Python virtual environments and dependency management.
+
+---
+
+# Day 2: Virtual Environments
+
+## Key Concepts
+- **Isolation:** Using `venv` prevents dependency conflicts between projects.
+- **Reproducibility:** `requirements.txt` acts as the "recipe" for recreating the environment on any machine.
+- **Git Hygiene:** Never commit the virtual environment folder (`.venv`); only commit the recipe (`requirements.txt`).
+
+## Commands Learned
+- `python -m venv .venv`: Creates the environment.
+- `source .venv/bin/activate`: Enters the environment.
+- `pip freeze > requirements.txt`: Saves the current libraries to a file.
+- `deactivate`: Exits the environment.
