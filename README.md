@@ -43,3 +43,18 @@ Today I set up the foundation for my MLOps journey.
 - `source .venv/bin/activate`: Enters the environment.
 - `pip freeze > requirements.txt`: Saves the current libraries to a file.
 - `deactivate`: Exits the environment.
+
+---
+
+# Day 3: Production-Ready Python Scripts
+
+## Key Concepts
+- **Scripts vs. Notebooks:** Notebooks are for exploration; Scripts (`.py`) are for automation and production.
+- **Type Hinting:** Using `variable: type` to ensure code clarity and reduce bugs.
+- **`if __name__ == "__main__":`**: Ensures code only runs when executed directly, not when imported.
+- **`argparse`**: The library that allows us to pass parameters into the script from the terminal, making the code reusable without editing it.
+
+## Code Snippet
+```bash
+# Example of running the script with arguments
+python projects/01-python-refresher/model.py --n_estimators 200
