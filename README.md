@@ -60,6 +60,7 @@ Today I set up the foundation for my MLOps journey.
 ```bash
 # Example of running the script with arguments
 python projects/01-python-refresher/model.py --n_estimators 200
+```
 
 ---
 
