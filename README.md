@@ -11,8 +11,10 @@ To go from basic scripts to building, deploying, and monitoring scalable ML pipe
 | Day | Topic | Status | Link |
 | :---: | :--- | :---: | :---: |
 | 01 | Git, Repo Setup & Project Structure | ✅ | [Log](./logs/day-001.md) |
-| 02 | ... | ⬜ | ... |
-| 03 | ... | ⬜ | ... |
+| 02 | Virtual Environments (`venv`) & Dependencies | ✅ | [Log](./logs/day-002.md) |
+| 03 | Production Scripts (`argparse`) vs Notebooks | ✅ | [Log](./logs/day-003.md) |
+| 04 | Automation with Makefiles & Bash Scripts | ✅ | [Log](./logs/day-004.md) |
+| 05 | ... | ⬜ | ... |
 
 ---
 
@@ -58,3 +60,23 @@ Today I set up the foundation for my MLOps journey.
 ```bash
 # Example of running the script with arguments
 python projects/01-python-refresher/model.py --n_estimators 200
+
+---
+
+# Day 4: Automation with Bash & Makefiles
+
+## Key Concepts
+- **Idempotency:** Writing scripts that can run multiple times without breaking the system (e.g., checking if `.venv` exists before creating it).
+- **Makefiles:** A "command center" for the project. Instead of remembering complex commands like `python -m venv ...`, we simply type `make install`.
+- **Shebang (`#!/bin/bash`):** The first line in a script that tells the OS which interpreter to use.
+- **Permissions:** Using `chmod +x` to make a script executable.
+
+## Code Snippet
+```makefile
+# Makefile example
+install:
+	python -m venv .venv
+	.venv/bin/pip install -r requirements.txt
+
+run:
+	.venv/bin/python projects/01-python-refresher/model.py
